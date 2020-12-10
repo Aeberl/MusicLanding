@@ -1,0 +1,90 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: rgb(100, 98, 98);
+}
+
+.nav {
+    background-color: rgb(58, 56, 56);
+    overflow: hidden;
+}
+.nav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 16px;
+    margin-right: 8px;
+}
+.nav a:hover {
+    background-color: rgb(223, 215, 215);
+    color: rgb(44, 42, 42);
+}
+.par1{
+    background-image: url('./img/music1.jpg');
+    min-height: 100%;
+}
+.par2{
+    background-image: url('./img/music2.jpg');
+    min-height: 400px;
+}
+.par3{
+    background-image: url('./img/music3.png');
+    min-height: 400px;
+}
+.par4{
+    background-image: url('./img/music4.jpg');
+    min-height: 400px;
+}
+.par1, .par2, .par3, .par4{
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-light{
+    background-color: #f4f4f4;
+    color: rgb(92, 87, 87);
+}
+.section-dark{
+    background-color: #b4c4ce;
+}
+.partext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.partext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+.partext .border.trans{
+    background-color: transparent;
+}
+
+.demo {
+    margin-top: 20px;
+    padding: 20px;
+}
+@media(max-width:568px){
+    .par1, .par2, .par3, .par4{
+        background-attachment: scroll;
+    }
+}
