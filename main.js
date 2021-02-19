@@ -1,9 +1,10 @@
-// The date we are counting to
-let countDownDate = new Date("Jan 7, 2021 15:00:25").getTime()
+const counter = document.querySelector('.counter')
+
+// CountDown launch date
+let countDownDate = new Date("Oct 7, 2021 16:00:07").getTime()
 
 //Change every one second
-
-let change = setInterval(function() {
+const timer = setInterval(() => {
     let now = new Date().getTime();
 
     let difference = countDownDate - now;
@@ -15,8 +16,13 @@ let change = setInterval(function() {
     (1000 * 60))
     let seconds = Math.floor((difference % (1000 * 60)) / 1000);
     
-    document.querySelector(".demo").innerHTML = 
+    counter.innerHTML = 
     days + "d" + " " + hours + "h" + " " + minutes + "m"
-    + " " + seconds + "s";
-}, 1000);
+    + " " + seconds + "s"
+
+    if (difference < 0){
+        clearInterval(timer)
+        counter.innerHTML = 'Launch time is here'
+    }
+}, 1000)
 
