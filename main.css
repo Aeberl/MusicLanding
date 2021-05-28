@@ -10,11 +10,12 @@ body, html {
 
 ul {
     list-style-type: none;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
-    background-color: rgb(58, 56, 56);
-    overflow: hidden;
+    background-color: rgb(90, 74, 74);
     z-index: 1;
+    opacity: 0.8;
 }
 li{
     float: left;
@@ -27,11 +28,11 @@ li a{
     color: rgb(253, 253, 253);
 }
 li a:hover{
-    color: blue;
-    background-color: aqua;
+    color: rgb(36, 36, 70);
+    background-color: rgb(110, 179, 179);
 }
 .active{
-    background-color: palegreen;
+    background-color: rgb(77, 94, 77);
 }
 
 .par1{
@@ -83,6 +84,7 @@ li a:hover{
     background-color: #111;
     color: #fff;
     padding: 20px;
+    opacity: 0.8;
 }
 .partext .border.trans{
     background-color: transparent;
@@ -95,5 +97,18 @@ li a:hover{
 @media(max-width:568px){
     .par1, .par2, .par3, .par4{
         background-attachment: scroll;
+        width: 100%;
+    }
+}
+@media(max-width: 850px){
+    .par1, .par2, .par3, .par4{
+        background-attachment: scroll;
+        width: 100%;
+    }
+}
+@media(max-width:550px){
+    .partext .border{
+        display: flex;
+        flex-direction: column;
     }
 }
